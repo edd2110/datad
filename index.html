@@ -1,0 +1,357 @@
+<!DOCTYPE html><html class="dark" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>DatAD - Inteligencia de datos a tu servicio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline": "#849584",
+                      "surface-container": "#271839",
+                      "surface-container-low": "#231435",
+                      "on-tertiary-fixed": "#001f28",
+                      "on-secondary-fixed-variant": "#5700c9",
+                      "on-secondary-fixed": "#23005b",
+                      "on-error": "#690005",
+                      "outline-variant": "#3b4a3d",
+                      "on-surface-variant": "#bacbb9",
+                      "primary-fixed-dim": "#00e473",
+                      "error": "#ffb4ab",
+                      "tertiary-fixed": "#b7eaff",
+                      "surface-tint": "#00e473",
+                      "on-secondary": "#3c0090",
+                      "surface-dim": "#1a0c2c",
+                      "tertiary": "#f9fcff",
+                      "on-tertiary-fixed-variant": "#004e60",
+                      "surface-container-highest": "#3d2e50",
+                      "surface-container-lowest": "#150627",
+                      "surface-bright": "#423255",
+                      "secondary": "#d1bcff",
+                      "on-surface": "#eedbff",
+                      "on-tertiary": "#003543",
+                      "surface-container-high": "#322344",
+                      "error-container": "#93000a",
+                      "surface": "#1a0c2c",
+                      "on-secondary-container": "#ddcdff",
+                      "on-primary": "#003918",
+                      "inverse-surface": "#eedbff",
+                      "secondary-fixed": "#e9ddff",
+                      "on-background": "#eedbff",
+                      "tertiary-fixed-dim": "#4cd6ff",
+                      "secondary-fixed-dim": "#d1bcff",
+                      "secondary-container": "#7000ff",
+                      "inverse-on-surface": "#39294b",
+                      "on-primary-fixed-variant": "#005225",
+                      "primary": "#f5fff2",
+                      "primary-fixed": "#63ff95",
+                      "inverse-primary": "#006d34",
+                      "primary-container": "#39ff88",
+                      "surface-variant": "#3d2e50",
+                      "on-primary-container": "#007236",
+                      "on-error-container": "#ffdad6",
+                      "on-primary-fixed": "#00210b",
+                      "on-tertiary-container": "#006b84",
+                      "tertiary-container": "#ade8ff",
+                      "background": "#1a0c2c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "container-max": "1440px",
+                      "base": "8px",
+                      "margin-desktop": "80px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "headline-xl": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-xl": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        .mesh-gradient {
+            background-color: #1a0c2c;
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(270,100%,20%,1) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, hsla(200,100%,15%,1) 0px, transparent 50%),
+                radial-gradient(at 50% 50%, hsla(140,100%,15%,1) 0px, transparent 50%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(0, 228, 115, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md antialiased overflow-x-hidden mesh-gradient min-h-screen">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 sticky z-50 bg-surface/60 backdrop-blur-[20px] dark:bg-surface/60 border-b border-white/10 dark:border-white/5 shadow-sm">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="DatAD Logo" class="h-10 w-10 object-contain rounded-DEFAULT" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz7fpC_1La51j_Ry9TJoGfAJ9yNI4xDXalQbDYWQEGxEJ_gzTmblkIbB3EHk3KHZErqm0gpGIGoNTC9j9YgQQQLm4lYFqg-swqPigr_P8ojdybXtmEpyOJ3luVQHY68xSA26B9GBHSbgvCONB2yupg7xsMtXPDJIKIhkamuOwNtYKLD5KHzvmo8VWrcii8cKUA7UqmIGZOP_BQYR1sefjg_5Ef3ZUyZvHJv2t_qqjQiFYua5EBu-JHR2bOharJBi-AvFdS3nnctyA">
+<span class="text-headline-md font-headline-md font-bold tracking-tight text-white dark:text-white">DatAD</span>
+</div>
+<div class="hidden md:flex items-center gap-8"></div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden pt-32 pb-20 md:pt-48 md:pb-32 flex flex-col items-center text-center">
+<div class="absolute inset-0 -z-20 w-full h-[120%] bg-cover bg-center origin-top transition-transform duration-75 ease-out" id="hero-parallax-bg" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCp63YctukFsI0rRAmUgnV5cyGrGQzV6l4q7lJ0LVMqhoiiYfnhiMYUzzTC-HFqLTM2WkF_ya9FueVrTAOHmOGQZ4-Z2ChN5TKnJbjz6WnJ5nd3vESB_NTs-NXvyucQnUha_mg3ZZUnYyKzjaTJ5Ib_LHvBjCg5F5HmcKnABc2VRG19CwQeIytYjEbEXnT-fUKKNPdSO6huXoHfwQD2Z2Dr50DHb6ghrftqi5MP8122GOXQQ3yzI7WiVKHjuHVy_ZizJbo01lBc5sg&quot;); transform: translate3d(0px, 0px, 0px) scale(1);"></div>
+<div class="absolute inset-0 -z-10 bg-background/70 bg-gradient-to-b from-background/40 via-background/80 to-background pointer-events-none"></div>
+<div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-fixed/20 via-transparent to-transparent pointer-events-none"></div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10 w-full flex flex-col items-center">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-xl md:text-headline-xl text-primary-fixed mb-6 max-w-4xl tracking-tight text-glow">
+                DatAD: Inteligencia de datos a tu servicio
+            </h1>
+<p class="font-body-lg text-body-lg text-white max-w-2xl mb-12">
+                Agencia de marketing basada en data y tecnología para Media Ops escalables de alto performance y rigor metodológico.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="inline-flex items-center justify-center px-8 py-4 bg-primary-fixed text-on-primary-fixed font-label-md text-label-md rounded-DEFAULT hover:bg-primary transition-colors duration-300" href="#services">
+                    Explorar Servicios
+                </a>
+<a class="inline-flex items-center justify-center px-8 py-4 bg-transparent border border-secondary text-secondary font-label-md text-label-md rounded-DEFAULT hover:bg-secondary/10 transition-colors duration-300" href="#contact">
+                    Contactar Ahora
+                </a>
+</div>
+</div>
+</section>
+<!-- Expertise Section -->
+<section class="py-20 md:py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="expertise">
+<div class="glass-card rounded-xl p-8 md:p-16 flex flex-col md:flex-row items-center gap-12 relative overflow-hidden">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl -z-10"></div>
+<div class="md:w-1/2">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-white mb-6">
+                        Expertos con ADN de Medios
+                    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Nuestro equipo se compone de expertos talentosos con experiencia en la industria, que han pasado por compañías como EXTE, RCN, y agencias de las Big 6, Entre otras con manejo de clientes regionales.
+                    </p>
+</div>
+<div class="md:w-1/2 w-full aspect-square md:aspect-video rounded-lg overflow-hidden border border-white/10 relative">
+<img alt="Data Intelligence" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsEi6Z58ivz1fvjP4sBFHqVhsTUQOiTJrOXWODrM8vVe7usPVrevznYsIlGHtsZAtK-ZpqkiFC0eDWoh9WaVIuJCpQzrWb55sHLfvvWPPBmTLMMftV6ph4RLHqaB3obZrqEawJe91RYlHuUMSma4_JdBlGWexm3EgqEpZ_ijgouxkfZL_5pD8repAa1QnMtaYd4v6oZIgPJPzrpDgK-0_FLy04se0SMQeI07vb5i4d4F8YGhisZMCUS4g">
+</div>
+</div>
+</section>
+<!-- Services Section (Bento Grid) -->
+<section class="py-20 md:py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="services">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-center text-primary-fixed mb-16">
+                Nuestros Servicios
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 min-h-[600px] auto-rows-[250px]">
+<!-- Service 1 -->
+<div class="glass-card rounded-xl overflow-hidden hover:shadow-[0_0_20px_rgba(0,228,115,0.2)] transition-all duration-300 md:col-span-2 md:row-span-2 group relative">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest/80 to-surface-container-highest/20 z-10 transition-opacity duration-300 group-hover:opacity-80"></div>
+<img alt="Hub y Outsourcing" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 group-hover:opacity-90 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyylGG9nwjSwqBSQOdT6sEs5O2C1HhWToD-SZA_6265mq_WM2UhbE67Qcn3OmlkpNS1aA3amjG6xBVgZmc0ldy7zLVpcifMcncKDwIqCO5fZdjNRuQHUEUMCaRgK-rPzrZazlM0lhlYmHsKAsey5VT1EvXCTlaqT2OnJWlucQ0QYClgTVdY68VCIcybgKppfKWhj6YWINQOJH94YTj7YzIYE_yCfHeUyqGY6WHxvpYUo01DqPNN2zndZVOdpcQZKXS1-7BfQQtMnI">
+<div class="relative z-20 p-8 h-full flex flex-col justify-end">
+<span class="material-symbols-outlined text-primary-fixed text-5xl mb-6 group-hover:-translate-y-2 transition-transform duration-300 drop-shadow-md">hub</span>
+<h3 class="font-headline-lg text-headline-md md:text-headline-lg text-white mb-4 drop-shadow-sm">Hub y Outsourcing</h3>
+<p class="font-body-lg text-body-md md:text-body-lg text-white/90 max-w-xl">Implementación de medios escalable y de alta precisión. Operamos como tu brazo ejecutor tecnológico.</p>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="glass-card rounded-xl overflow-hidden hover:shadow-[0_0_20px_rgba(209,188,255,0.2)] transition-all duration-300 group relative">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest/80 to-surface-container-highest/20 z-10 transition-opacity duration-300 group-hover:opacity-80"></div>
+<img alt="Auditoría y consultoría" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIkceZkfVp0OsCgIDVIuRmoeY1FSrwXejOWN8hrzggstdS0epLw6f6Kyle5tjIxbygwHe8MD2RTy9Gpb9nVCNDAE3VBVDs0FYmm1S7hlvvy8Zx8ka2uJSuep4wErcUfdVmUoyp1SDSH23ldakYbfuK-vY5Hh7fhD_o1SXNbcR6fKkNtd7eEC6mwjhG8sCYgqxzRjmdFYOa8z8yA5WtkIbiUatq_ruVi2548IFlKjfugfAQaPtircp9SF5epDSD_rMT6MR7si8sXYk">
+<div class="relative z-20 p-6 h-full flex flex-col justify-end">
+<span class="material-symbols-outlined text-secondary text-3xl mb-4 group-hover:-translate-y-1 transition-transform duration-300">fact_check</span>
+<h3 class="font-label-md text-label-md text-white mb-2 uppercase tracking-wider">Auditoría y consultoría en SSP</h3>
+<p class="font-body-md text-body-md text-white/80 text-sm">Especialistas en SSP Side para conectar tu web o app a inventarios de anuncios.</p>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="glass-card rounded-xl overflow-hidden hover:shadow-[0_0_20px_rgba(76,214,255,0.2)] transition-all duration-300 group relative">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest/80 to-surface-container-highest/20 z-10 transition-opacity duration-300 group-hover:opacity-80"></div>
+<img alt="Gestión Integral" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE5lbjcFzBcTpIqAi2fRFil1G-7Vcd2Rv7tsT7J2l-gjY6mrjVUxMM4aziK_Q7ovWs93tQWMKgdgN2idzGN4yyrLz9_r8jz6s4MAn_VZtc2nDuWIlG4yLKVXeydRqPNard5EkIjqn6zpol84hrjrh86DezmiYaZppQI6709qPVXirk2vfou-WqNRf9Fa2rjGRhyDeGtJxiz2FN9BT0ktRvb55sScMjVrQ82SzNiAZIqp6j5S-fn6vktlAyXFAOL_2H2aL7jrORqW8">
+<div class="relative z-20 p-6 h-full flex flex-col justify-end">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-3xl mb-4 group-hover:-translate-y-1 transition-transform duration-300">manage_accounts</span>
+<h3 class="font-label-md text-label-md text-white mb-2 uppercase tracking-wider">Gestión Integral</h3>
+<p class="font-body-md text-body-md text-white/80 text-sm">Cuentas de medios, estrategia y performance continuo.</p>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="glass-card rounded-xl overflow-hidden hover:shadow-[0_0_20px_rgba(0,228,115,0.2)] transition-all duration-300 group relative md:col-span-1">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest/80 to-surface-container-highest/20 z-10 transition-opacity duration-300 group-hover:opacity-80"></div>
+<img alt="Producción Creativa" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLsIvGT4vIeoytTXG-GQq809aUz2o5biTCxAad3yj2q2Wdni9md-SXua-J-apwQuCMWBVLpgt0IbxdoSXAHwmENW-Sx9lWGiOqN9qxTwvT75a2D9hjLazs6ssC2NrWieCLfkr689Idi3-U6U9CK7_7Vb8OssE3vuQps_jz-qeCpHMNhLxRwcJ6YXO0foxKBzHhdkkOW3ndmDFyIhuaedgMZ7Wj81A-rRW4_3xkkWSX9V8RJLXFUqx4VmIFs">
+<div class="relative z-20 p-6 h-full flex flex-col justify-end">
+<span class="material-symbols-outlined text-primary-fixed text-3xl mb-4 group-hover:-translate-y-1 transition-transform duration-300">photo_camera</span>
+<h3 class="font-label-md text-label-md text-white mb-2 uppercase tracking-wider">Producción Creativa</h3>
+<p class="font-body-md text-body-md text-white/80 text-sm">Fotografía y assets optimizados para media digital.</p>
+</div>
+</div>
+<!-- Service 5 -->
+<div class="glass-card rounded-xl overflow-hidden hover:shadow-[0_0_20px_rgba(209,188,255,0.2)] transition-all duration-300 md:col-span-2 group relative">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest/80 to-surface-container-highest/20 z-10 transition-opacity duration-300 group-hover:opacity-80"></div>
+<img alt="Desarrollos Ad-hoc" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLuaPMc_CJrskNXLEsdGfEfKk5VOI6dNmsqLZwFlXraVvPG_44IVwwdEOTNA473RvHbByZn7Q0SK179jRknt5AQdreUJJkQ3-nBLssHZE78Wi4GcJtgTAgLqHAZWiEzISt-WELVX4H3mn0any_aCTk11zjePYKWte2Q1EA013vK1Gm_SqZJZaGqdD3BIAPOT97jTH08JepoNRBViTXHfxPjJXrEXXpszHPVCgcB-EdW2UL5NTCCfCPlcEg">
+<div class="relative z-20 p-8 h-full flex flex-col justify-end">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:-translate-y-1 transition-transform duration-300 drop-shadow-md">api</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2 drop-shadow-sm">Desarrollos Ad-hoc</h3>
+<p class="font-body-md text-body-md text-white/80">Conexiones Martech personalizadas para integrar tu ecosistema de datos sin fricciones. Creación de tecnología, webs, aplicaciones o desarrollos a la medida.</p>
+</div>
+</div>
+<!-- Service 6 -->
+<div class="glass-card rounded-xl overflow-hidden hover:shadow-[0_0_20px_rgba(76,214,255,0.2)] transition-all duration-300 md:col-span-3 group relative">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest/80 to-surface-container-highest/20 z-10 transition-opacity duration-300 group-hover:opacity-80"></div>
+<img alt="BI &amp; Reportes" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD5klK8m9qwMcTTBUJ5hiHzW7P9SV9AaoA2pMh3KpIxodrF75yJEXxj3rNJbQ6xd8mbmPFW6bN1ciuXBRQJkNW5YSERz3yt8hnzoLyQayTAIiQ0SU4sIatEJTm6vweEJn15OGb0CSJ3exM7-NcaGE383IDEdmsn8zybbsE8AsgdjR0vAQ-3GVEcscYkpUGxPHFLtrM0CQgvwuwl2Wql3mhLYVnymyL1dA1lUC5iTqdnJG3cmMj8rST-xDDB4KxdnATrBz71-Z_xLQ">
+<div class="relative z-20 p-8 h-full flex flex-col justify-end">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-4xl mb-4 group-hover:-translate-y-1 transition-transform duration-300 drop-shadow-md">dashboard</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2 drop-shadow-sm">BI &amp; Reportes</h3>
+<p class="font-body-md text-body-md text-white/80">Medición, procesos ETL y Dashboarding avanzado.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-20 md:py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center relative" id="contact">
+<div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-surface-container-highest/50 via-transparent to-transparent pointer-events-none"></div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-6">
+                Hablemos de tu performance
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                Lleva tus operaciones de medios al siguiente nivel con rigor metodológico e inteligencia de datos.
+            </p>
+<a class="inline-flex items-center justify-center px-10 py-5 bg-primary-fixed text-on-primary-fixed font-headline-md text-headline-md rounded-lg hover:bg-primary transition-colors duration-300 shadow-[0_0_20px_rgba(0,228,115,0.3)] hover:shadow-[0_0_30px_rgba(0,228,115,0.5)]" href="mailto:carlos.sanchez@datad.com.co">
+<span class="material-symbols-outlined mr-3">mail</span> carlos.sanchez@datad.com.co
+            </a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="full-width bottom-0 bg-surface-container-lowest dark:bg-surface-container-lowest bg-gradient-to-t from-surface-container-lowest to-surface-dim border-t border-white/5 mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-gutter space-y-4 md:space-y-0 max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md font-extrabold text-on-surface dark:text-on-surface flex items-center gap-2 opacity-80 hover:opacity-100 duration-300">
+<img alt="DatAD Footer Logo" class="h-6 w-6 object-contain rounded-sm grayscale opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz7fpC_1La51j_Ry9TJoGfAJ9yNI4xDXalQbDYWQEGxEJ_gzTmblkIbB3EHk3KHZErqm0gpGIGoNTC9j9YgQQQLm4lYFqg-swqPigr_P8ojdybXtmEpyOJ3luVQHY68xSA26B9GBHSbgvCONB2yupg7xsMtXPDJIKIhkamuOwNtYKLD5KHzvmo8VWrcii8cKUA7UqmIGZOP_BQYR1sefjg_5Ef3ZUyZvHJv2t_qqjQiFYua5EBu-JHR2bOharJBi-AvFdS3nnctyA">
+                DatAD
+            </div>
+<div class="flex gap-6">
+</div>
+<p class="text-on-surface-variant dark:text-on-surface-variant opacity-70 font-body-md text-body-md text-sm">
+                © 2024 DatAD. Data-driven excellence for high-performance marketing.
+            </p>
+</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const heroBg = document.getElementById('hero-parallax-bg');
+        if (!heroBg) return;
+
+        const handleScroll = () => {
+            const scrolled = window.scrollY;
+            
+            // Apply effect only if user hasn't scrolled past the hero completely
+            if (scrolled < window.innerHeight) {
+                // Move down slightly slower than scroll for parallax
+                const yPos = scrolled * 0.35;
+                // Scale up slightly for reveal/zoom effect
+                const scale = 1 + (scrolled * 0.0005);
+                
+                heroBg.style.transform = `translate3d(0, ${yPos}px, 0) scale(${scale})`;
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        // Trigger once to set initial state
+        handleScroll();
+    });
+</script>
+
+
+</body></html>
